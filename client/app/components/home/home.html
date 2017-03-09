@@ -1,9 +1,27 @@
-<navbar></navbar>
-<header>
-  <hero></hero>
-</header>
-<main>
-  <div>
-    <h1>Found in {{ $ctrl.name }}.html</h1>
+<div class="mindler">
+  <div class="title" >
+    <h4 class="alert-heading">{{ $ctrl.name }}</h4>
+    <div class="badge badge-info">
+      <i class="material-icons">radio_button_checked</i>
+      店铺营业中
+    </div>
+    <div class="badge badge-danger">
+      <i class="material-icons">radio_button_unchecked</i>
+      店铺已关闭
+    </div>
+    <button class="btn btn-info" type="button">店铺更名</button>
   </div>
-</main>
+
+
+  <div class="group d-flex flex-row">
+    <div class="group__item w-25 d-flex" ng-repeat="item in $ctrl.group">
+      <div class="group__item__left d-flex d-inline-flex align-items-center justify-content-center">
+        <i class="material-icons">{{item.icon}}</i>
+      </div>
+      <div class="group__item__right d-flex flex-column">
+        <div class="title">{{item.space}}</div>
+        <div class="message">{{item.number}}</div>
+      </div>
+    </div>
+  </div><!-- group the end -->
+</div>

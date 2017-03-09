@@ -1,0 +1,17 @@
+section.row{
+  &>[class^="col-"]{
+    padding:0;
+  }
+}
+
+@media (max-width: 1279px) {
+  section{
+    //height:calc(100vh - 88px);
+  }
+}
+
+@media (min-width: 1280px) {
+  section{
+    //height:calc(100vh - 70px);
+  }
+}

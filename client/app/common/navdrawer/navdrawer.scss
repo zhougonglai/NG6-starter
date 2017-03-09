@@ -1,0 +1,64 @@
+.nav_drawer{
+  height: 100%;
+  a{
+    transition: all .35s ease-in-out;
+
+    .material-icons{
+      margin-left: 1rem;
+      margin-right: 1rem;
+      transition: all .35s ease-in-out;
+    }
+
+    &.active{
+      .material-icons{
+        margin-right: 1.4rem;
+        -ms-transform:scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari */
+        transform: scale(1.2); /* 标准语法 */
+        color:#fff;
+      }
+    }
+
+    &:hover{
+      .material-icons{
+        margin-right: 1.4rem;
+        -ms-transform:scale(1.2); /* IE 9 */
+        -webkit-transform: scale(1.2); /* Safari */
+        transform: scale(1.2); /* 标准语法 */
+        color:#fff;
+      }
+    }
+
+    .badge-pill{
+      position: absolute;
+      right:15px;
+      top: 7px;
+    }
+  }
+}
+//nav{
+//  height: 100%;
+//  background-color: #3e5368;
+//}
+//.nav-link{
+//  padding: .75rem 1.5rem !important;
+//  height: 3.5rem;
+//  line-height: 2rem;
+//  border:1px solid;
+//  border-color: #8797ae;
+//  color:#8797ae;
+//  transition: all .35s ease-in-out;
+//  border-left: none;
+//  border-top:none;
+//  font-size: 20px;
+//  &:first-of-type{
+//
+//  }
+//  &:last-of-type{
+//
+//  }
+//
+
+//
+
+

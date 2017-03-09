@@ -1,0 +1,154 @@
+<div class="p-2 designer">
+  <div class="pane bg-faded p-2">
+      <nav class="navbar navbar-light bg-faded justify-content-between w-100">
+        <div class="form-inline">
+          <input class="form-control mr-sm-2" type="text" placeholder="姓名/ID" />
+          <button class="btn btn-info my-2 my-sm-0" type="submit">搜索</button>
+        </div>
+
+        <button type="button" class="btn btn-secondary mr-3">新增设计师</button>
+      </nav>
+      <div class="d-flex flex-row">
+        <div class="title">等级:</div>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-info active">
+            <input type="radio" name="options" autocomplete="off" checked>全部
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">高级设计师
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">中级设计师
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">低级设计师
+          </label>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row">
+        <div class="title">成交量:</div>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-info active">
+            <input type="radio" name="options" autocomplete="off" checked>全部
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">自定义
+          </label>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row form-inline">
+        <div class="title">收益金额:</div>
+
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-info active">
+            <input type="radio" name="options" autocomplete="off" checked>全部
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">自定义
+          </label>
+        </div>
+
+
+          <input type="text" class="form-control form-control-info mb-2 mr-sm-2 mb-sm-0"  placeholder="请输入">
+
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">-</div>
+            <input type="text" class="form-control form-control-info" placeholder="请输入">
+          </div>
+
+          <button type="submit" class="btn btn-info">确定</button>
+      </div>
+
+
+      <div class="d-flex flex-row form-inline">
+        <div class="title">每日最大设计量:</div>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-info active">
+            <input type="radio" name="options" autocomplete="off" checked>全部
+          </label>
+          <label class="btn btn-info">
+            <input type="radio" name="options" autocomplete="off">自定义
+          </label>
+        </div>
+      </div>
+  </div>
+
+  <h5>共设计师 35 名</h5>
+  <table class="table table-hover">
+    <thead class="thead-inverse bg-inverse">
+      <tr>
+        <th class="photo">头像</th>
+        <th class="name">姓名(ID)</th>
+        <th class="level">等级</th>
+        <th class="numbers">成交量</th>
+        <th class="money">收益金额</th>
+        <th class="maxNumbers">每日最大设计量</th>
+        <th class="addTime">添加时间</th>
+        <th class="appointment">预约量</th>
+        <th class="edit">操作</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="tab in $ctrl.tabs">
+        <td>
+          <img ng-src="{{tab.photo}}" width="75" height="75" class="rounded-circle">
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.name}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.level}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.numbers}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.money}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.maxNumbers}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.addTime}}
+          </div>
+        </td>
+        <td>
+          <div class="d-flex align-items-center h-100">
+            {{tab.appointment}}
+          </div>
+        </td>
+        <td style="padding: 0;">
+          <div class="d-flex flex-column align-items-center h-100 text-center">
+            <div class="w-100 h-50 d-flex flex-row justify-content-center">
+              <div class="w-50 h-100 d-flex align-items-center">
+                <button type="button" class="btn btn-primary btn-block">编辑</button>
+              </div>
+              <div class="w-50 h-100 d-flex align-items-center">
+                <button type="button" class="btn btn-danger btn-block">删除</button>
+              </div>
+            </div>
+            <div class="w-100 h-50 d-flex justify-content-center">
+              <div class="w-100 h-100 d-flex align-items-center">
+                <button type="button" class="btn btn-info btn-block">查看详情</button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

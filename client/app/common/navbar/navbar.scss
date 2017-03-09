@@ -1,22 +1,38 @@
 @import '../common';
 
-.navbar {
-  height: 6.5rem;
-  background-color: $primaryColor;
-  padding: 1rem;
 
-  .nav-links,
-  .logo {
-    display: inline-block;
+.alert{
+  margin-bottom:0 !important;
+  margin-right: 18px;
+  //padding: .5rem 1rem !important;
+  line-height: 20px;
+}
+
+.navbar-brand{
+  img{
+    margin-right: 15px;
+  }
+}
+
+.navbar-nav{
+  .nav-link{
+
+  }
+}
+
+.collapse{
+  //display: flex;
+}
+
+
+@media (min-width:1000px) and (max-width: 1279px){
+  .navbar-toggleable-md, .navbar-toggleable-md>.container {
+    //display: flex !important;
   }
 
-  .logo {
-    color: $lightTextColor;
-    margin-right: 50%;
-  }
 
-  .nav-links span {
-    color: $lightTextColor;
-    font-size: 1.6rem;
-  }
+  //.navbar-toggleable-md .navbar-collapse>:first-child {
+  //  margin-top:0 !important;
+  //  align-items: center;
+  //}
 }

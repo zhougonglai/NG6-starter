@@ -1,0 +1,28 @@
+.pane{
+  .from-inline{
+    width: 100%;
+
+  }
+}
+
+.designer{
+ .title{
+   line-height: 52px;
+   width:105px;
+ }
+
+
+  table{
+    thead.thead-inverse{
+      th{
+        color: #fff;
+      }
+    }
+    td{
+      height: 104px !important;
+    }
+    .photo{
+      width: 105px;
+    }
+  }
+}

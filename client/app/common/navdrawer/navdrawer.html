@@ -1,0 +1,15 @@
+<div class="list-group nav_drawer bg-info">
+  <a  class="list-group-item list-group-item-info" ng-repeat="menuItem in $ctrl.menu" ui-sref="main.{{menuItem.sref}}" id="{{menuItem.icon}}" ui-sref-active="active">
+    <i class="material-icons">{{menuItem.icon}}</i>
+    {{ menuItem.name }}
+    <span class="badge badge-danger badge-pill" ng-if="menuItem.badge">{{menuItem.badge}}</span>
+  </a>
+</div>
+
+<!--<nav class="nav flex-column bg-inverse text-white">   ng-click="$ctrl.toggleNav(menuItem.icon)" id="{{menuItem.icon}}" -->
+  <!--<a class="nav-link" ng-repeat="menuItem in $ctrl.menu" ui-sref="main.{{menuItem.sref}}" ng-click="$ctrl.toggleNav(menuItem.icon)" id="{{menuItem.icon}}">-->
+    <!--<i class="material-icons">{{menuItem.icon}}</i>-->
+    <!--{{ menuItem.name }}-->
+    <!--<span class="badge badge-info float-right" ng-if="menuItem.badge">{{menuItem.badge}}</span>-->
+  <!--</a>-->
+<!--</nav>-->

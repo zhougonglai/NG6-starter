@@ -1,8 +1,39 @@
-<nav class="navbar">
-  <div class="logo">
-    <h1><a ui-sref="home">{{ $ctrl.name }}</a></h1>
-  </div>
-  <div class="nav-links">
-    <span><a ui-sref="about">about</a></span>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"  data-target="#navbarContent"
+  aria-controls="navbarContent" aria-expanded="false" aria-label="菜单">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  <a class="navbar-brand" ui-sref="main.home">
+    <img src="https://v4.bootcss.com/assets/brand/bootstrap-solid.svg" width="30" height="30">
+    {{$ctrl.name}}
+  </a>
+  
+  <div class="collapse navbar-collapse" id="navbarContent">
+
+    <ul class="navbar-nav mr-auto">
+      <!--<li class="nav-item active">-->
+        <!--<a class="nav-link" ui-sref="main.about">-->
+          <!--{{$ctrl.name}}-->
+        <!--</a>-->
+      <!--</li>-->
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <div class="alert alert-info mr-sm-2" role="alert">
+        欢迎<strong>店长!</strong>
+        <a ui-sref="main.about" class="alert-link">{{$ctrl.user.name}}</a>
+        登录
+      </div>
+      <div class="btn-group my-2 my-sm-0" data-toggle="buttons">
+        <button class="btn btn-info">
+          账户设置
+        </button>
+        <button class="btn btn-info">
+          退出登录
+        </button>
+      </div>
+    </form>
   </div>
 </nav>
+
